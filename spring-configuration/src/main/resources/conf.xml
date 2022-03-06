@@ -10,10 +10,22 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     ">
 
-    <bean id="divideprocess" class="dz.spring.springconfiguration.DivideProcessor"/>
-    <bean id="multprocess" class="dz.spring.springconfiguration.MultiplyProcessor"/>
-    <bean id="sumprocess" class="dz.spring.springconfiguration.SumProcessor"/>
-    <bean id="subprocess" class="dz.spring.springconfiguration.SubtractProcessor"/>
+    <bean id="divideprocess" class="dz.spring.springconfiguration.DivideProcessor">
+        <property name="a" value="1"/>
+        <property name="b" value="1"/>
+    </bean>
+    <bean id="multprocess" class="dz.spring.springconfiguration.MultiplyProcessor">
+        <property name="a" value="1"/>
+        <property name="b" value="1"/>
+    </bean>
+    <bean id="sumprocess" class="dz.spring.springconfiguration.SumProcessor">
+        <property name="a" value="1"/>
+        <property name="b" value="1"/>
+    </bean>
+    <bean id="subprocess" class="dz.spring.springconfiguration.SubtractProcessor">
+        <property name="a" value="1"/>
+        <property name="b" value="1"/>
+    </bean>
 
     <bean id="calculator" class="dz.spring.springconfiguration.Calculator">
         <constructor-arg ref="divideprocess"/>
