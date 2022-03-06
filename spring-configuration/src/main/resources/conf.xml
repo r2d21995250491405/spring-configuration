@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+
+    <bean id="divideprocess" class="dz.spring.springconfiguration.DivideProcessor"/>
+    <bean id="multprocess" class="dz.spring.springconfiguration.MultiplyProcessor"/>
+    <bean id="sumprocess" class="dz.spring.springconfiguration.SumProcessor"/>
+    <bean id="subprocess" class="dz.spring.springconfiguration.SubtractProcessor"/>
+
+    <bean id="calculator" class="dz.spring.springconfiguration.Calculator">
+        <constructor-arg ref="divideprocess"/>
+        <constructor-arg ref="multprocess"/>
+        <constructor-arg ref="sumprocess"/>
+        <constructor-arg ref="subprocess"/>
+    </bean>
+
+
+
+
+
+
+
+
+</beans>
